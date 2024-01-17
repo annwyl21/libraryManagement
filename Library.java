@@ -49,6 +49,8 @@ public class Library {
 
     // method to borrow book
     public void borrowBook(String title, String author) {
+        Boolean bookFound = false; // flag to indicate when book is located
+
         for (Book book: books) {
             // Check if current book matches the provided title AND author
             if (book.title.equals(title) && book.author.equals(author)) {
@@ -56,9 +58,15 @@ public class Library {
                     // change book status from Available to Borrowed
                     book.changeBookStatus();
                     System.out.println(book.toString());
+                    bookFound = true; // set flag to found, to prevent default output
                 }
                 break; // Breaks the loop once book is found
             }
+        }
+
+        if (!bookFound) {
+            // printed if no book is found
+            System.out.println("Book NOT FOUND");
         }
     }
 
@@ -102,6 +110,7 @@ public class Library {
 
         System.out.println("Borrow Book");
         corringham.borrowBook("The Lord of the Rings", "J.R. Tolkien");
+        corringham.borrowBook("Lord of the Dance", "Someone");
         corringham.listAllBooks();
     }
 }
