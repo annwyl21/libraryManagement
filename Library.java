@@ -4,8 +4,8 @@ public class Library {
     // Static variable to keep track of total number of books in the library.
     protected static int totalBooks = 0;
 
-    // Static ArrayList to store the books. It's static so it belongs to the class, not instances of the class.
-    protected static ArrayList<Book> books = new ArrayList<Book>();
+    // Static ArrayList to store the books. It's static, it belongs to the class, not instances of the class.
+    protected ArrayList<Book> books = new ArrayList<Book>();
 
     // Method to add a new book to the library.
     public void addBook(Book newBook) {
@@ -56,7 +56,7 @@ public class Library {
             if (book.title.equals(title) && book.author.equals(author)) {
                 if (book.isAvailable()) {
                     // change book status from Available to Borrowed
-                    book.changeBookStatus();
+                    book.setBookStatus();
                     System.out.println(book.toString());
                     bookFound = true; // set flag to found, to prevent default output
                 }
@@ -99,7 +99,7 @@ public class Library {
 //        corringham.addBook(tolkien);
 //        corringham.addBook(tolkien2);
 
-        // Prints the total number of books in the library.
+        // Prints the total number of books in the library instances (not including the digital library subclass).
         System.out.println("Library currently holds " + totalBooks + " books.");
         corringham.listAllBooks();
 
@@ -112,5 +112,23 @@ public class Library {
         corringham.borrowBook("The Lord of the Rings", "J.R. Tolkien");
         corringham.borrowBook("Lord of the Dance", "Someone");
         corringham.listAllBooks();
+
+        // Creating an instance of subclass DigitalLibrary named WestminsterOnline.
+        DigitalLibrary WestminsterOnline = new DigitalLibrary();
+
+        // Creating a new book instance.
+        // This creates a book titled "The Secret Barrister" with the author "Secret Barrister".
+        Book secretBarrister = new Book("The Secret Barrister", "Secret Barrister");
+
+        // Adding the created book to the EllenHoughton digital library.
+        // Since DigitalLibrary extends Library, it inherits the addBook method.
+        WestminsterOnline.addBook(secretBarrister);
+
+        // Listing all books in the EllenHoughton digital library.
+        // The listAllBooks method is also inherited from the Library class.
+        WestminsterOnline.listAllBooks();
+
+        // Prints the total number of books in the digital libraries.
+        System.out.println("Library currently holds " + totalBooks + " books.");
     }
 }

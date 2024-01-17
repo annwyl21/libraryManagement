@@ -7,10 +7,17 @@ public class Book {
     protected final String author;
     protected BookStatus status; // Represents the current status of the book.
 
+    protected BookType bookType;
+
     // Enum for representing book status with two possible values: AVAILABLE and BORROWED.
     protected enum BookStatus {
         AVAILABLE,
         BORROWED
+    }
+
+    protected enum BookType {
+        PRINTED,
+        ONLINE
     }
 
     // Constructor to initialize a Book object.
@@ -18,6 +25,13 @@ public class Book {
         this.title = newTitle; // Sets the title of the book.
         this.author = newAuthor; // Sets the author of the book.
         this.status = BookStatus.AVAILABLE; // Default status is AVAILABLE.
+        this.bookType = BookType.PRINTED; // Default book type is printed format unless otherwise specified.
+    }
+
+    // Setter for BookType
+    public void setBookType() {
+        this.bookType = BookType.ONLINE;
+        System.out.println(this.bookType);
     }
 
     // Method to check if the book is available.
@@ -26,8 +40,8 @@ public class Book {
         return this.status == BookStatus.AVAILABLE;
     }
 
-    // Method to change state of book borrowed/ available
-    public void changeBookStatus() {
+    // Setter for book status
+    public void setBookStatus() {
         if (this.status == BookStatus.AVAILABLE) {
             // Update status to Borrowed if Available
             this.status = BookStatus.BORROWED;
@@ -40,7 +54,7 @@ public class Book {
     // Overridden toString method to return the book's details as a string.
     @Override
     public String toString() {
-        return status + " " + title + " by " + author + " "; // Formats and returns book information.
+        return status + " " + bookType + " " + title + " by " + author; // Formats and returns book information.
     }
 
 }
