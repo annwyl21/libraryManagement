@@ -28,8 +28,7 @@ public class Library {
         for (Book book: books) {
             // Checks if current book matches the provided title and author.
             if (book.title.equals(title) || book.author.equals(author)) {
-                availability = book.isAvailable();
-                if (availability == true) {
+                if (book.isAvailable()) {
                     System.out.println(book.title + " by " + book.author);
                     System.out.println("Currently AVAILABLE");
                 } else {
@@ -41,11 +40,23 @@ public class Library {
                 notFound = true; // Sets the notFound flag if the book does not match.
             }
         }
-        if (notFound == true) {
+        if (notFound) {
             // Prints a message if the book is not found in the library.
             System.out.println(title + " by " + author + " NOT FOUND");
         }
         return availability; // Returns the availability status.
+    }
+
+    // method to borrow book
+    public void borrowBook(String title, String author) {
+        for (Book book: books) {
+            if (book.title.equals(title) && book.author.equals(author)) {
+                if (book.isAvailable()) {
+                    book.changeBookStatus();
+                    System.out.println(book.toString());
+                }
+            }
+        }
     }
 
     // Main method - entry point of the program.
@@ -82,8 +93,12 @@ public class Library {
         corringham.listAllBooks();
 
         // Checks and prints the availability of specific books.
+        System.out.println("Check Availability");
         corringham.checkAvailability("The Lord of the Rings", "Tolkien");
-        corringham.checkAvailability("Lord of the Rings", "Tolkien");
+        corringham.checkAvailability("Lord of the Dance", "Someone");
 
+        System.out.println("Borrow Book");
+        corringham.borrowBook("The Lord of the Rings", "J.R. Tolkien");
+        corringham.listAllBooks();
     }
 }

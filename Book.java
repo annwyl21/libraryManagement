@@ -23,13 +23,22 @@ public class Book {
     // Method to check if the book is available.
     public Boolean isAvailable() {
         // Returns true if the status is AVAILABLE, false otherwise.
-        return this.status == BookStatus.BORROWED;
+        return this.status == BookStatus.AVAILABLE;
+    }
+
+    // Method to change state of book borrowed/ available
+    public void changeBookStatus() {
+        if (this.status == BookStatus.AVAILABLE) {
+            this.status = BookStatus.BORROWED;
+        } else {
+            this.status = BookStatus.AVAILABLE;
+        }
     }
 
     // Overridden toString method to return the book's details as a string.
     @Override
     public String toString() {
-        return title + " by " + author + " "; // Formats and returns book information.
+        return status + " " + title + " by " + author + " "; // Formats and returns book information.
     }
 
 }
