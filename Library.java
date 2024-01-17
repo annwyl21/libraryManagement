@@ -26,7 +26,7 @@ public class Library {
         Boolean availability = false; // Flag to track if the book is available.
         Boolean notFound = false; // Flag to track if the book is not found.
         for (Book book: books) {
-            // Checks if current book matches the provided title and author.
+            // Checks if current book matches the provided title OR author.
             if (book.title.equals(title) || book.author.equals(author)) {
                 if (book.isAvailable()) {
                     System.out.println(book.title + " by " + book.author);
@@ -50,11 +50,14 @@ public class Library {
     // method to borrow book
     public void borrowBook(String title, String author) {
         for (Book book: books) {
+            // Check if current book matches the provided title AND author
             if (book.title.equals(title) && book.author.equals(author)) {
                 if (book.isAvailable()) {
+                    // change book status from Available to Borrowed
                     book.changeBookStatus();
                     System.out.println(book.toString());
                 }
+                break; // Breaks the loop once book is found
             }
         }
     }

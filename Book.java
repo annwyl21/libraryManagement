@@ -29,8 +29,10 @@ public class Book {
     // Method to change state of book borrowed/ available
     public void changeBookStatus() {
         if (this.status == BookStatus.AVAILABLE) {
+            // Update status to Borrowed if Available
             this.status = BookStatus.BORROWED;
         } else {
+            // Update status to Available if Borrowed
             this.status = BookStatus.AVAILABLE;
         }
     }
