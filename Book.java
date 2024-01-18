@@ -51,6 +51,11 @@ public class Book {
         }
     }
 
+    // Getter for book status
+    public BookStatus getStatus() {
+        return this.status;
+    }
+
     // Overridden toString method to return the book's details as a string.
     @Override
     public String toString() {

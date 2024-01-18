@@ -19,14 +19,24 @@ public class LibraryTest {
     }
 
     // The @Test annotation indicates that this is a test method.
+    // test addBook(), check if the total number of books in the library is as expected after the addBook operation
     @Test
     public void testAddBook() {
         Book book = new Book("1984", "George Orwell");
         library.addBook(book);
-        // Using Assertions.assertEquals to check if the total number of books in the library is as expected after the addBook operation.
+        // Using Assertions.assertEquals
         // The first parameter is the expected value, and the second is the actual value.
         // If the assertion fails, it means there's an error in the addBook method or related components of the Library class.
         Assertions.assertEquals(1, library.getTotalBooks());
+    }
+
+    // test checkAvailability(), check is book availability is accurately reported
+    @Test
+    public void checkAvailability() {
+        Book book = new Book("1984", "George Orwell");
+        library.addBook(book);
+        Boolean available = library.checkAvailability("1984", "George Orwell");
+        Assertions.assertEquals(true, available);
     }
 }
 

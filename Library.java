@@ -36,6 +36,7 @@ public class Library {
                 if (book.isAvailable()) {
                     System.out.println(book.title + " by " + book.author);
                     System.out.println("Currently AVAILABLE");
+                    availability = true;
                 } else {
                     System.out.println(book.title + " by " + book.author);
                     System.out.println("Currently unavailable");
