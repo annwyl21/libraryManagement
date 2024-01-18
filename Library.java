@@ -13,6 +13,11 @@ public class Library {
         totalBooks ++; // Increments the total book count.
     }
 
+    // getter method to return total books in library
+    public int getTotalBooks() {
+        return totalBooks;
+    }
+
     // Method to list all books in the library.
     public void listAllBooks() {
         for (int i=0; i<books.size(); i++) {
