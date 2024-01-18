@@ -35,8 +35,8 @@ public class LibraryTest {
     public void checkAvailability() {
         Book book = new Book("1984", "George Orwell");
         library.addBook(book);
-        Boolean available = library.checkAvailability("1984", "George Orwell");
-        Assertions.assertEquals(true, available);
+        String available = library.checkAvailability("1984", "George Orwell");
+        Assertions.assertEquals("AVAILABLE", available);
     }
 }
 

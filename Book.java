@@ -34,6 +34,11 @@ public class Book {
         System.out.println(this.bookType);
     }
 
+    // Getter for Enum
+    public String getStatusAsString() {
+        return this.status.toString();
+    }
+
     // Method to check if the book is available.
     public Boolean isAvailable() {
         // Returns true if the status is AVAILABLE, false otherwise.

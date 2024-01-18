@@ -27,8 +27,7 @@ public class Library {
     }
 
     // Method to check the availability of a book by title and author.
-    public Boolean checkAvailability(String title, String author) {
-        Boolean availability = false; // Flag to track if the book is available.
+    public String checkAvailability(String title, String author) {
         Boolean notFound = false; // Flag to track if the book is not found.
         for (Book book: books) {
             // Checks if current book matches the provided title OR author.
@@ -36,12 +35,13 @@ public class Library {
                 if (book.isAvailable()) {
                     System.out.println(book.title + " by " + book.author);
                     System.out.println("Currently AVAILABLE");
-                    availability = true;
+                    System.out.println(book.getStatusAsString());
+                    return book.getStatusAsString();
                 } else {
                     System.out.println(book.title + " by " + book.author);
                     System.out.println("Currently unavailable");
+                    return book.getStatusAsString();
                 }
-                break; // Breaks the loop once the book is found.
             } else {
                 notFound = true; // Sets the notFound flag if the book does not match.
             }
@@ -50,7 +50,7 @@ public class Library {
             // Prints a message if the book is not found in the library.
             System.out.println(title + " by " + author + " NOT FOUND");
         }
-        return availability; // Returns the availability status.
+        return null; // Return null if book not found
     }
 
     // method to borrow book
