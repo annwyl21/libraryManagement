@@ -11,6 +11,8 @@
 
     <!-- My Java Version which is 17 (Version 8 would be 1.8) -->
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- added UTF-8 to resolve warnings in github action logs -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
