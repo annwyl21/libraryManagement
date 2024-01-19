@@ -15,7 +15,9 @@ public class LibraryTest {
     // A test fixture, as it sets up the necessary preconditions before each test.
     @BeforeEach
     public void setUp() {
+        System.out.println("Attempting to initialise Library object.");
         library = new Library();
+        System.out.println("LibraryTest setUp: Library object created.");
     }
 
     // The @Test annotation indicates that this is a test method.

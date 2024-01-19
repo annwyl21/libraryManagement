@@ -11,7 +11,9 @@ public class BookTest {
     @BeforeEach
     public void setUp() {
         // Initialize a Book object before each test
+        System.out.println("Attempting to initialise book object.");
         book = new Book("1984", "George Orwell");
+        System.out.println("BookTest setUp: Book object created.");
     }
 
     @Test
