@@ -9,19 +9,21 @@ import com.librarymanagement.Book;
 public class BookTest {
 
     // Declaring a Book instance to be used in the tests
-    private Book book;
-
-    // Fixture
-    @BeforeEach
-    public void setUp() {
-        // Initialize a Book object before each test
-        System.out.println("Attempting to initialise book object.");
-        book = new Book("1984", "George Orwell");
-        System.out.println("BookTest setUp: Book object created.");
-    }
+//    private Book book;
+//
+//    // Fixture
+//    @BeforeEach
+//    public void setUp() {
+//        // Initialize a Book object before each test
+//        System.out.println("Attempting to initialise book object.");
+//        book = new Book("1984", "George Orwell");
+//        System.out.println("BookTest setUp: Book object created.");
+//    }
 
     @Test
     public void testSetBookStatus() {
+        Book book = new Book("1984", "George Orwell");
+
         // Initial status of the book should be available
         Book.BookStatus initialStatus = book.getStatus();
         Assertions.assertEquals(Book.BookStatus.AVAILABLE, initialStatus, "Initial status should be AVAILABLE.");
