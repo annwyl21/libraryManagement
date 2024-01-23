@@ -41,7 +41,7 @@ public class LibraryTest {
     @Test
     public void testCheckAvailability() {
         Library libraryB = new Library();
-        Book book = new Book("1984", "George Orwell");
+        // Book book = new Book("1984", "George Orwell");
         System.out.println("test to check availability");
         libraryB.addBook(book);
         String available = libraryB.checkAvailability("1984", "George Orwell");
