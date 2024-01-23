@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
+import com.librarymanagement.Book;
+
 public class BookTest {
 
     // Declaring a Book instance to be used in the tests
