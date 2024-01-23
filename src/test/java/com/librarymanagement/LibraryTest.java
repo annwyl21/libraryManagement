@@ -29,9 +29,9 @@ public class LibraryTest {
     // test addBook(), check if the total number of books in the library is as expected after the addBook operation
     @Test
     public void testAddBook() {
-//        Library libraryA = new Library();
+        // test using fixtures
         Book book = new Book("1984", "George Orwell");
-        System.out.println("test to add a book");
+        System.out.println("test to add a book using fixture for library instance");
         library.addBook(book);
         System.out.println("addBook complete");
         // Using Assertions.assertEquals
@@ -43,12 +43,13 @@ public class LibraryTest {
     // test checkAvailability(), check is book availability is accurately reported
     @Test
     public void testCheckAvailability() {
-        Library library = new Library();
+        // test without fixtures
+        Library libraryA = new Library();
         Book book = new Book("Animal Farm", "George Orwell");
-        System.out.println("test to check availability");
-        library.addBook(book);
+        System.out.println("test to check availability not using fixture");
+        libraryA.addBook(book);
         System.out.println("addBook complete");
-        String available = library.checkAvailability("1984", "George Orwell");
+        String available = libraryA.checkAvailability("1984", "George Orwell");
         System.out.println("checkAvailability complete");
         Assertions.assertEquals("AVAILABLE", available);
     }
