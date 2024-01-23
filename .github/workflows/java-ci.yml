@@ -19,10 +19,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       # run Maven to build project and download necessary dependencies such as JUnit
-      # - name: Build with Maven
-      #  run: mvn -B package --file pom.xml
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
       # specifically run maven test phase to execute JUnit tests
       - name: Run JUnit Tests
-        run: mvn test -e
+        run: mvn test
       # Re-run Maven using the -X switch to enable full debug logging
-      # mvn test -X
+      # mvn test -X or -e to add an error log
