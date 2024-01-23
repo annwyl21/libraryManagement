@@ -21,6 +21,8 @@
     - Use of `try` and `catch` by implementing error handling while adding books (e.g., handling null values).
 
 4. **Test Class**:
-    - Using a fixture
     - Use unit tests
+
+**Interesting Issue**
+    - Using a fixture worked locally but the build failed when using it with GitHub Actions, so I commented it out to solve the build problem. There must be more differences between the environments than I have yet identified.
 

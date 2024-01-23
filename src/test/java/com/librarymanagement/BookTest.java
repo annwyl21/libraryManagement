@@ -23,6 +23,7 @@ public class BookTest {
     @Test
     public void testSetBookStatus() {
         Book book = new Book("1984", "George Orwell");
+        System.out.println("test to set book status");
 
         // Initial status of the book should be available
         Book.BookStatus initialStatus = book.getStatus();

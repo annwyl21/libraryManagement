@@ -29,6 +29,7 @@ public class LibraryTest {
     public void testAddBook() {
         Library libraryA = new Library();
         Book book = new Book("1984", "George Orwell");
+        System.out.println("test to add a book");
         libraryA.addBook(book);
         // Using Assertions.assertEquals
         // The first parameter is the expected value, and the second is the actual value.
@@ -41,6 +42,7 @@ public class LibraryTest {
     public void checkAvailability() {
         Library libraryB = new Library();
         Book book = new Book("1984", "George Orwell");
+        System.out.println("test to check availability");
         libraryB.addBook(book);
         String available = libraryB.checkAvailability("1984", "George Orwell");
         Assertions.assertEquals("AVAILABLE", available);
