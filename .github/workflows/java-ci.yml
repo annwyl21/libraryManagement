@@ -19,7 +19,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       # run Maven to build project and download necessary dependencies such as JUnit
-      - name: Build with Maven
+      # - name: Build with Maven
       #  run: mvn -B package --file pom.xml
       # specifically run maven test phase to execute JUnit tests
       - name: Run JUnit Tests
