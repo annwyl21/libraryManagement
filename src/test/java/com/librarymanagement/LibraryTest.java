@@ -33,6 +33,7 @@ public class LibraryTest {
         Book book = new Book("1984", "George Orwell");
         System.out.println("test to add a book");
         library.addBook(book);
+        System.out.println("addBook complete");
         // Using Assertions.assertEquals
         // The first parameter is the expected value, and the second is the actual value.
         // If the assertion fails, it means there's an error in the addBook method or related components of the Library class.
@@ -46,7 +47,9 @@ public class LibraryTest {
         Book book = new Book("Animal Farm", "George Orwell");
         System.out.println("test to check availability");
         library.addBook(book);
+        System.out.println("addBook complete");
         String available = library.checkAvailability("1984", "George Orwell");
+        System.out.println("checkAvailability complete");
         Assertions.assertEquals("AVAILABLE", available);
     }
 }
