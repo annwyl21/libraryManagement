@@ -1,4 +1,6 @@
 package com.librarymanagement;
+import com.librarymanagement.Library;
+import com.librarymanagement.Book;
 
 // DigitalLibrary class extending the Library class.
 // This means DigitalLibrary inherits all non-private properties and methods of Library.
