@@ -3,8 +3,9 @@ package com.librarymanagement;
 import java.util.ArrayList;
 
 public class Library {
-    // Static variable to keep track of total number of books in the library.
-    protected static int totalBooks = 0;
+    // Static variable to give each library a standard motto.
+    protected static String motto = "They hide all the secrets of the world in books.";
+    protected int totalBooks = 0;
 
     // Static ArrayList to store the books. It's static, it belongs to the class, not instances of the class.
     protected ArrayList<Book> books = new ArrayList<Book>();

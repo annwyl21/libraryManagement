@@ -31,8 +31,8 @@ public class Main {
 //        corringham.addBook(tolkien);
 //        corringham.addBook(tolkien2);
 
-        // Prints the total number of books in the library instances (not including the digital library subclass).
-        System.out.println("Library currently holds " + Library.totalBooks + " books.");
+        // Prints the total number of books in the library instance.
+        System.out.println("Library currently holds " + corringham.totalBooks + " books.");
         corringham.listAllBooks();
 
         // Checks and prints the availability of specific books.
@@ -61,6 +61,6 @@ public class Main {
         WestminsterOnline.listAllBooks();
 
         // Prints the total number of books in the digital libraries.
-        System.out.println("Library currently holds " + Library.totalBooks + " books.");
+        System.out.println("Library currently holds " + WestminsterOnline.totalBooks + " books.");
     }
 }
