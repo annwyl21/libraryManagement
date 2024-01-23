@@ -39,7 +39,7 @@ public class LibraryTest {
 
     // test checkAvailability(), check is book availability is accurately reported
     @Test
-    public void checkAvailability() {
+    public void testCheckAvailability() {
         Library libraryB = new Library();
         Book book = new Book("1984", "George Orwell");
         System.out.println("test to check availability");
