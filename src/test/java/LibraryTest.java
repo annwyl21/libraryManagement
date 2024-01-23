@@ -6,10 +6,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 // allows access to the Assertions class, which provides static assertion methods used for writing test conditions that must be met for the test to succeed.
 
+
 public class LibraryTest {
 
     // Declaring a Library instance to be used in the tests
-    private Library library;
+    public Library library;
 
     // The @BeforeEach annotation indicates that the annotated method should be executed before each @Test method.
     // A test fixture, as it sets up the necessary preconditions before each test.
