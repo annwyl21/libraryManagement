@@ -21,7 +21,7 @@ public class BookTest {
         System.out.println("BookTest setUp: Book object created.");
     }
 
-    @Disabled
+    @Disabled("Reason because fixtures isn't working properly")
     @Test
     public void testSetBookStatus() {
         // test setBookStatus using fixture to create book instance

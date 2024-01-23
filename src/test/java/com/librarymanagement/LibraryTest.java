@@ -27,7 +27,7 @@ public class LibraryTest {
 
     // The @Test annotation indicates that this is a test method.
     // test addBook(), check if the total number of books in the library is as expected after the addBook operation
-    @Disabled
+    @Disabled("Reason because fixtures isn't working properly")
     @Test
     public void testAddBook() {
         // test using fixtures
