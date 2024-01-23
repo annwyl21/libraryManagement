@@ -44,7 +44,7 @@
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.LibraryTest">
+  <component name="RunManager" selected="JUnit.LibraryTest (1)">
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Library" />
       <module name="library-management-system" />
@@ -61,6 +61,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.librarymanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.librarymanagement" />
+      <option name="MAIN_CLASS_NAME" value="com.librarymanagement.LibraryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibraryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-management-system" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryTest (1)" />
         <item itemvalue="JUnit.LibraryTest" />
         <item itemvalue="Application.Library" />
         <item itemvalue="JUnit.BookTest" />
