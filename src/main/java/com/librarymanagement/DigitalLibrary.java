@@ -1,3 +1,5 @@
+package com.librarymanagement;
+
 // DigitalLibrary class extending the Library class.
 // This means DigitalLibrary inherits all non-private properties and methods of Library.
 public class DigitalLibrary extends Library {

@@ -1,3 +1,5 @@
+package com.librarymanagement;
+
 public class Book {
 
     // Instance variables marked as protected and final.
